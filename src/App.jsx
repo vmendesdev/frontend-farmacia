@@ -4,9 +4,8 @@ import Home from "./componentes/home/Home";
 import Navbar from "./componentes/navbar/Navbar";
 import Footer from "./componentes/footer/Footer";
 import './App.css';
-import ListarCategorias from "./componentes/categoria/listarCategoria/ListarCategorias";
-import FormCategoria from "./componentes/categoria/formCategoria/FormCategoria";
-
+import ListarCategorias from "./componentes/categoria/ListarCategorias";
+import FormCategoria from "./componentes/categoria/FormCategoria";
 function App () {
   return (
     <>
