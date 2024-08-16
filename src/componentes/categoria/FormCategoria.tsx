@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Categoria, cadastrarCategoria, atualizarCategoria } from '../services/categoriaService';
+import { Categoria, cadastrarCategoria, atualizarCategoria } from '../../services/categoriaService';
 
 interface FormCategoriaProps {
-  categoriaAtual?: Categoria; // categoriaAtual é opcional para edição
-  onSave: () => void; // Função chamada após salvar ou atualizar a categoria
+  categoriaAtual?: Categoria;
+  onSave: () => void; 
 }
 
 const FormCategoria: React.FC<FormCategoriaProps> = ({ categoriaAtual, onSave }) => {

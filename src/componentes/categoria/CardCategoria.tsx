@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Categoria } from '../services/categoriaService';
+import { Categoria } from '../../services/categoriaService';
 
 interface CardCategoriaProps {
   categoria: Categoria;

@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { listarCategorias } from '../services/categoriaService';
+import { listarCategorias } from '../../services/categoriaService';
 import CardCategoria from './CardCategoria';
+
+interface Categoria {
+  id: number;
+  nome: string;
+  descricao: string;
+}
 
 const ListarCategorias: React.FC = () => {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
 
   useEffect(() => {
-    listarCategorias('/categorias', setCategorias);
+    //listarCategorias('/categorias');
   }, []);
 
   const handleDelete = (id: number) => {
-    // Função para lidar com a exclusão de uma categoria
-    // Pode ser implementada usando a função deletarCategoria do serviço
   };
 
   return (

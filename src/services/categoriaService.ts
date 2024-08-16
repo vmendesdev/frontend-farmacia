@@ -1,18 +1,15 @@
 import axios, { AxiosRequestConfig } from 'axios';
 
-// Configura o Axios com a URL base do backend
 const api = axios.create({
-  baseURL: 'LINK DO DEPLOY - EM DESENVOLVIMENTO' // Substitua pelo link do seu backend
+  baseURL: 'LINK DO DEPLOY - EM DESENVOLVIMENTO' 
 });
 
-// Define a interface Categoria
 export interface Categoria {
   id?: number;
   nome: string;
   descricao: string;
 }
 
-// Função para listar categorias
 export const listarCategorias = async (url: string, setDados: (dados: Categoria[]) => void, config?: AxiosRequestConfig) => {
   try {
     const resposta = await api.get<Categoria[]>(url, config);
@@ -22,7 +19,6 @@ export const listarCategorias = async (url: string, setDados: (dados: Categoria[
   }
 };
 
-// Função para cadastrar uma nova categoria
 export const cadastrarCategoria = async (url: string, dados: Categoria, setDados: (dados: Categoria) => void) => {
   try {
     const resposta = await api.post<Categoria>(url, dados);
@@ -32,7 +28,6 @@ export const cadastrarCategoria = async (url: string, dados: Categoria, setDados
   }
 };
 
-// Função para atualizar uma categoria existente
 export const atualizarCategoria = async (url: string, dados: Categoria, setDados: (dados: Categoria) => void, config?: AxiosRequestConfig) => {
   try {
     const resposta = await api.put<Categoria>(url, dados, config);
@@ -42,7 +37,6 @@ export const atualizarCategoria = async (url: string, dados: Categoria, setDados
   }
 };
 
-// Função para deletar uma categoria
 export const deletarCategoria = async (url: string, config?: AxiosRequestConfig) => {
   try {
     await api.delete(url, config);
